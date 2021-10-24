@@ -1,0 +1,24 @@
+package com.spring.DI;
+
+public class Student {
+	
+	private String studentname;
+	private int rollNumber;
+	
+	public void displaystudentinfo() {
+		System.out.println("Student name is "+ studentname);
+		System.out.println("Student rollnumber "+ rollNumber);
+	}
+	
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+		System.out.println("Setter method is called");
+	}
+
+	public void setRollNumber(int rollNumber) {
+		this.rollNumber = rollNumber;
+	}
+	
+	
+	
+}

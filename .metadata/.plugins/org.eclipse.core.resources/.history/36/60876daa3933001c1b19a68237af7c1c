@@ -1,0 +1,13 @@
+package com.spring.college;
+
+public class College {
+	
+	private Principle principle;
+	
+	
+	public void test() {
+		System.out.println("testing method");
+	}
+
+	
+}

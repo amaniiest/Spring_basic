@@ -1,0 +1,16 @@
+package com.spring.DI;
+
+public class Student {
+	
+	private String studentname;
+	
+	public void displaystudentinfo() {
+		System.out.println("Student name is "+ studentname);
+	}
+	
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	
+	
+}

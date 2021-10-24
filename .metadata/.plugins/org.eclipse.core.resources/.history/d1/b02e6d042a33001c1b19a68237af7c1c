@@ -1,0 +1,27 @@
+package com.jdbc.connection;
+
+import java.net.URL;
+import java.sql.Driver;
+import java.sql.DriverManager;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sun.jdi.connect.spi.Connection;
+
+public class Client {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		JDBCconnection jdbCconnection = context.getBean("Jdbc-connection" , JDBCconnection.class);
+		jdbCconnection.connectionDetails();
+	}
+	
+	public void getJDBCConnection() throws Exception{
+		Class.forName(driver);
+		Connection connection = DriverManager.getConnection(url,username,paswword)
+		System.out.println("Connection successfull "+ connection );
+	}
+}
+

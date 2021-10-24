@@ -1,0 +1,15 @@
+package com.jdbc.connection;
+
+public class JDBCconnection {
+	private String id;
+	private String password;
+	private String driver;
+	private String url;
+	
+	public void connectionDetails() {
+		System.out.println("id = "+ id);
+		System.out.println("password = "+ password);
+		System.out.println("driver = "+ driver);
+		System.out.println("url = "+ url );
+	}
+}

@@ -1,0 +1,16 @@
+package com.spring.college;
+
+import java.beans.JavaBean;
+
+import org.springframework.stereotype.Component;
+
+//@Component("collegeBean")
+
+@JavaBean
+public class College {
+	
+	public void test() {
+		System.out.println("testing method");
+	}
+
+}

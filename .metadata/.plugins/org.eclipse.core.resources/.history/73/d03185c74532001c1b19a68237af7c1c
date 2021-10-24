@@ -1,0 +1,10 @@
+package com.spring.di.objective;
+
+public class Student {
+	
+	MathCheat mathCheat;
+	
+	public void cheating() {
+		mathCheat.mathcheat();
+	}
+}

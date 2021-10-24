@@ -1,0 +1,4 @@
+mysql.id = id
+mysql.password = psswd
+mysql.driver = com.jdbc.driver
+mysql.url = jdbc.mysql.com

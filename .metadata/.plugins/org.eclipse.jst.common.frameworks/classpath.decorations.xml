@@ -1,0 +1,7 @@
+<classpath>
+  <container id="Demo-Spring!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="G:/Spring_Workspace/Demo-Spring/src/main/webapp/WEB-INF/lib/spring-context-5.2.9.RELEASE.jar">
+      <source-attachment-path>/Demo-Spring</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

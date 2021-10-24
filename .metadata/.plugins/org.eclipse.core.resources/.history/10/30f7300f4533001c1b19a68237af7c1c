@@ -1,0 +1,26 @@
+package com.spring.college;
+
+public class College {
+	
+	private Principle principle;
+	private Teacher teacher;
+	
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
+
+	public void setPrinciple(Principle principle) {
+		System.out.println("Setter called");
+		this.principle = principle;
+	}
+	
+	public void test() {
+		System.out.println("testing method");
+		principle.status();
+		teacher.teach();
+	}
+
+
+
+	
+}

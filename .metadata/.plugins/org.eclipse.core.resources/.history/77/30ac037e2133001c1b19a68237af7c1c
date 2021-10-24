@@ -1,0 +1,38 @@
+package com.spring.loadingfrompropertiesfiles;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+
+public class Student {
+
+	private String name;
+	private String interestedCourse;
+	private String hobby;
+
+
+	@Value("Aman")
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Autowired
+	@Value("Spring-Core")
+	public void setInterestedCourse(String interestedCourse) {
+		this.interestedCourse = interestedCourse;
+	}
+	
+	@Autowired
+	@Value("Coding")
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
+	}
+
+
+	public void displayStudentInfo() {
+		System.out.println("Student name " + name);
+		System.out.println("Interested course " + interestedCourse);
+		System.out.println("Hobby " + hobby);
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.spring.DI;
+
+public class Exam {
+	
+	public static void main(String[] args) {
+		Student student = new Student();
+		student.studentname = "Aman";
+		student.displaystudentinfo();
+	}
+	
+	
+}

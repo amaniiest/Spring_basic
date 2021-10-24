@@ -1,0 +1,8 @@
+package com.spring.college;
+
+public class Principle {
+	
+	public void status() {
+		System.out.println("Principle is present");
+	}
+}

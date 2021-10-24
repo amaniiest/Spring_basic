@@ -1,0 +1,57 @@
+package com.beanlifecycle.annotation;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.springframework.context.annotation.Configuration;
+
+public class StudentDAO {
+	
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost:3306/esnew";
+	private String username = "root";
+	private String password = "Qwerty@1a";
+	
+	public void selectAllRows() throws ClassNotFoundException, SQLException {
+		//load driver
+		Class.forName(driver);
+		
+		//get a connect
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		//execute query
+		Statement stmt = con.createStatement();
+		
+		ResultSet rs = stmt.executeQuery("select * from HostelStudentInfo;"); 
+				
+		while(rs.next()) {
+			int StudentId = rs.getInt(1);
+			String StudentName = rs.getString(2);
+			String HostelFee = rs.getString(3);
+			String FoodType = rs.getString(4);
+			
+			System.out.println(StudentId + " " + StudentName + " " + HostelFee + " " + FoodType);
+		}
+		
+	}
+	
+	public void deleteStudentRecord(int Studentid) throws SQLException, ClassNotFoundException {
+		//load driver
+				Class.forName(driver);
+				
+				//get a connect
+				Connection con = DriverManager.getConnection(url,username,password);
+				
+				//execute query
+				Statement stmt = con.createStatement();
+				
+				stmt.executeUpdate("delete from HostelStudentInfo where Student_id = "+ Studentid); 
+				
+				System.out.println("Record deleted with the id = " + Studentid);
+	}
+	
+	
+
+}

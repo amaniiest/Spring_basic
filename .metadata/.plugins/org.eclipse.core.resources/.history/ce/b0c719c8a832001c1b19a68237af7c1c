@@ -1,0 +1,23 @@
+package com.spring.autowired;
+
+public class Human {
+	private  Heart heart;
+	
+	public Human (Heart heart) {
+		this.heart = heart;
+	}
+
+	public void setHeart(Heart heart) {
+		System.out.println("Setter method is called");
+		this.heart = heart;
+	}
+	
+	public void startPumping() {
+		if(heart != null) {
+		heart.pump();
+		}
+		else {
+			System.out.println("Heart not pumping");
+		}
+	}
+}

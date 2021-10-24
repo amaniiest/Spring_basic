@@ -1,0 +1,24 @@
+package com.jdbc.connection;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class JDBCconnection {
+	@Value(${mysql.userName})
+	private String userName;
+	
+	@Value(${mysql.password})
+	private String password;
+	
+	@Value(mysql.driver)
+	private String driver;
+	
+	@Value(mysql.url)
+	private String url;
+	
+	public void connectionDetails() {
+		System.out.println("Username = "+ userName);
+		System.out.println("password = "+ password);
+		System.out.println("driver = "+ driver);
+		System.out.println("url = "+ url );
+	}
+}

@@ -1,0 +1,23 @@
+package com.spring.college;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class College {
+	
+	@Autowired
+	private Principle principle;
+	@Autowired
+	private Teacher teacher;
+	
+	public void test() {
+		System.out.println("testing method");
+		principle.status();
+		teacher.teach();
+	}
+
+
+
+	
+}
